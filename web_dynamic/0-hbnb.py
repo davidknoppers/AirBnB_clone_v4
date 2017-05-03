@@ -17,7 +17,7 @@ from models.review import Review
 from models.state import State
 from flask import Flask
 from flask import render_template
-from uuid import uuid4
+import uuid
 app = Flask(__name__)
 
 
@@ -34,7 +34,7 @@ def hbnb():
                 places.append(["{} {}".format(
                     v.first_name, v.last_name), place])
     places.sort(key=lambda x: x[1].name)
-    return render_template("100-hbnb.html",
+    return render_template("0-hbnb.html",
                            amenities=amenities, result=states, places=places,
                            cache_id=uuid.uuid4())
 
