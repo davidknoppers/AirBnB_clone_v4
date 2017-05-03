@@ -4,6 +4,8 @@
 
 The purpose of this project is to recreate the AirBnB site, from the back-end data management to the front-end user interface. 
 
+<h4>fourth phase</h4>
+To be filled in!!
 
 <h4>third phase</h4>
 Build an API. To implement, run the API module. Current implmentation requires an existing database in mysql. 
@@ -62,6 +64,7 @@ Where we are creating a command line interpretor to access objects that will sto
 - **Jianqin Wang**, \<jianqin.wang@holbertonschool.com>, @jianqinwang94
 - **Anne Cognet**, \<anne.cognet@holbertonschool.com>, @1million40
 - **Richard Sim**, \<richard.sim@holbertonschool.com>, @rdsim8589
+- **David Knoppers**, \<david.knoppers@holbertonschool.com>, @dxknoppers
 
 ----------------------------------------
 
