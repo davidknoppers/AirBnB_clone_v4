@@ -136,6 +136,8 @@ h4 {
     border-radius: 20px;
     -moz-border-radius: 20px;
     vertical-align: 50%;
+    margin-top: 15px;
+    margin-bottom: 15px;
     position: absolute;
     right: 30px;
     background-color: #cccccc;
