@@ -103,3 +103,43 @@ ul {
 .amenities:hover .popover {
     display: block;
 }
+
+#checkbox {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+}
+
+input[type="checkbox"] {
+    width: 10px;
+    height: 10px;
+}
+
+h4 {
+    width: 200px;
+    padding: 2px 5px;
+    height: 100%;
+    /* BOTH of the following are required for text-overflow */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* label { */
+/*   display: block; */
+/*   padding-left: 15px; */
+/*   text-indent: -15px; */
+/* } */
+/* input { */
+/*   width: 10px; */
+/*   height: 28px; */
+/*   padding: 0; */
+/*   margin:0; */
+/*   vertical-align: bottom; */
+/*   position: relative; */
+/*   top: -1px; */
+/*  pp *overflow: hidden; */
+/* } */
