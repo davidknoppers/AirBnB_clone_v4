@@ -50,7 +50,7 @@ function getPlaces () {
           $('<div class="max_guest"></div>').text(place.max_guest + ' Guests'),
           $('<div class="number_rooms"></div>').text(place.number_rooms + ' Rooms'),
             $('<div class="number_bathrooms"></div>').text(place.number_bathrooms + ' Bathrooms')),
-            $('<div class="user"></div>').html('<b>Owner</b>: ' + place.user_id),
+            $('<div class="user"></div>').html('<b>Owner</b>: ' + 'Richard Sim'),
             $('<div class="description"></div>').html(place.description)));
       }
     }
