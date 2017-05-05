@@ -40,7 +40,7 @@
 	  <ul class="popover small-list">
 	      {% for a in amenities|sort(attribute='name') %}
 	      <div>
-		<li><label><INPUT type="checkbox" data-id={{ a.id }} data-name={{ a.name }}/> {{ a.name }}</label></li>
+		<li><label><INPUT type="checkbox" data-id="{{ a.id }}" data-name="{{ a.name }}"/> {{ a.name }}</label></li>
 	      </div>
 	      {% endfor %}
 	  </ul>
