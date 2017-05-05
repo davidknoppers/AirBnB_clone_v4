@@ -10,9 +10,12 @@
     <link rel="icon" type="image/png" href="../static/images/icon.png" />
     <title>AirBnB clone</title>
     <SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="../static/scripts/4-hbnb.js?{{cache_id}}"></SCRIPT>
   </head>
   <body>
     <header>
+      <div id="api_status">
+      </div>
     </header>
     <div class="container">
       <section class="filters">
@@ -45,27 +48,11 @@
 	<button>Search</button>
       </section> <!-- end filters -->
       <section class="places">
-	<h1>Places</h1>
-	    {% for place in places %}
-	        <article>
-	            <div class="price_by_night">${{place[1].price_by_night}}</div>
-	            <h2>{{place[1].name}}</h2>
-	            <div class="informations">
-	              <div class="max_guest">{{place[1].max_guest}} Guests</div>
-		      <div class="number_rooms">{{place[1].number_rooms}} Rooms</div>
-		      <div class="number_bathrooms">{{place[1].number_rooms}} Bathrooms</div>
-		    </div> <!-- end informations -->
-		    <div class="user"><b>Owner</b>: {{place[0]}}</div>
-		    {% autoescape false %}
-		    <div class="description">{{place[1].description}}</div>
-		    {% endautoescape %}
-		</article>
-	    {% endfor %}
       </section> <!-- end places -->
     </div> <!-- end container -->
     <footer>
       Holberton School
     </footer>
-    <SCRIPT type="text/javascript" src="../static/scripts/1-hbnb.js"></SCRIPT>
+
   </body>
 </html>
