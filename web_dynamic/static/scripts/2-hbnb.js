@@ -1,7 +1,7 @@
 let amenitiesIDs = new Map();
 $( document ).ready(function() {
-    $('input:checkbox').change(amenitiesCheckBox
-			      );
+    $('input:checkbox').change(amenitiesCheckBox);
+    statusColor();
 });
 
 function amenitiesCheckBox() {
@@ -24,4 +24,11 @@ function amenitiesCheckBox() {
 	}
     }
     $(".amenities h4").text(names);
+}
+
+
+function statusColor() {
+    $.get("http://0.0.0.0:5001/api/v1/status/", function (data, textStatus) {
+	alert("Response from server:" + data.status);
+    });
 }
