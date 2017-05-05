@@ -8,3 +8,6 @@ header {
     background-repeat: no-repeat;
     background-position: 20px 50%;
 }
+.available#api_status {
+    background-color: #ff545f;
+}
