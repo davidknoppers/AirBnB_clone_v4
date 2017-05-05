@@ -36,20 +36,23 @@ function statusColor () {
 }
 function getPlaces () {
   $.ajax({
-    type: 'POST',
     url: 'http://0.0.0.0:5001/api/v1/places_search/',
-    contentType: 'application/json',
+    type: 'POST',
     data: '{}',
+    contentType: 'application/json',
     success: function (data) {
-      $(data).each(function () {
-        $('.places').append($('<article>').append('<div class="price_by_night">$' + $(this).attr('price_by_night') + '</div>')
-    .append('<h2>' + $(this).attr('name') + '</h2>').append($('<div class="informations">')
-    .append('<div class="max_guest">' + $(this).attr('max_guest') + ' Guests</div>')
-    .append('<div class="number_rooms">' + $(this).attr('number_rooms') + ' Rooms</div>')
-    .append('<div class="number_bathrooms">' + $(this).attr('number_bathrooms') + ' Bathrooms</div>'))
-    .append('<div class="description">' + $(this).attr('description') + '</div>')
-         );
-      });
+      for (let place of data) {
+        $('section.places').append(
+        $('<article></article>').append(
+        $('<div class="price_by_night">').text('$' + place.price_by_night),
+        $('<h2></h2>').text(place.name),
+        $('<div class="informations"></div>').append(
+          $('<div class="max_guest"></div>').text(place.max_guest + ' Guests'),
+          $('<div class="number_rooms"></div>').text(place.number_rooms + ' Rooms'),
+            $('<div class="number_bathrooms"></div>').text(place.number_bathrooms + ' Bathrooms')),
+            $('<div class="user"></div>').html('<b>Owner</b>: ' + place.user_id),
+            $('<div class="description"></div>').html(place.description)));
+      }
     }
   });
 }
