@@ -39,7 +39,6 @@ function statusColor () {
 function searchButton () {
   let listOfAmenIDs = [];
   let searchRequest = {};
-
   for (let name of amenitiesIDs.keys()) {
     listOfAmenIDs.push(amenitiesIDs.get(name));
   }
